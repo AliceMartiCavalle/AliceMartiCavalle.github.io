@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Roboto-Thin"; //* si on rajoute une font au cas où, bug
+    src: url("../font/Roboto-Thin.ttf");
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url("../font/Roboto-Medium.ttf");
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../font/Roboto-Bold.ttf");
+}
+@font-face {
+    font-family: "Shrikhand";
+    src: url("../font/Shrikhand-Regular.ttf");
+}
+
+#none {
+    //*masquer les defs svg en bas de page
+    display: none;
+}
+
+.ligne {
+    /*border : 1px solid green;*/
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.colonne {
+    /*border : 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body {
+    // border: 1px solid purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    @include desktopOnly {
+        // border: 1px solid red;
+        display: grid;
+        grid-template-rows: 80px 330px 300px 20px;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 20px;
+        align-items: start;
+        justify-items: center; //? équivalent de space-envenly pour grid ?
+        grid-gap: 20px;
+        max-width: 1500px;
+        margin: auto;
+        // grid-template-areas:
+        // "1 2 3"
+        // "4 4 4"
+        // "5 5 5";
+    }
+    @include mobileOnly {
+        padding: 0;
+        margin: 0;
+    }
+}
+i {
+    /*border : 1px solid;*/
+    padding: 0 10px;
+}
+h1 {
+    margin: 0;
+    font-size: map-get($size, medium);
+    font-family: map-get($weight, bold), Arial, sans-serif;
+}
+h2 {
+    margin: 0;
+    font-size: map-get($size, medium);
+    font-family: map-get($weight, bold), Arial, sans-serif;
+}
+h3 {
+    margin: 0;
+    font-size: map-get($size, small);
+    font-family: map-get($weight, bold), Arial, sans-serif;
+}
+p {
+    font-family: map-get($weight, thin), Arial, sans-serif;
+}
+strong {
+    font-family: map-get($weight, medium), Arial, sans-serif;
+}
+a {
+    /*border: 1px solid springgreen;*/
+    color: black;
+    text-decoration: none;
+}
+.stretch-link::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
