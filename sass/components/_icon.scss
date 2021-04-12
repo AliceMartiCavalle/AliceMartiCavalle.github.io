@@ -1,20 +1,19 @@
 .icon {
-    // border: 1px solid #000;
     position: relative;
     &:nth-child(3),
     &:nth-child(5),
     &:nth-child(7),
     &:nth-child(9) {
+        
         align-self: flex-end;
     }
     > svg {
-        // border: 2px solid purple;
         width: 30px;
         height: 30px;
         position: absolute;
         right: 50px;
         bottom: 40px;
-        fill: map-get($color, sombre);
+        fill: darken(map-get($color, background), 50%);
         opacity: 1;
         @include desktopOnly {
             right: 30px;
@@ -25,7 +24,7 @@
             height: 25px;
             right : 35px;
         }
-        &.--menu {
+        &.heartMenu {
             bottom: -10px;
             right: 30px;
             @include miniOnly {
@@ -33,7 +32,6 @@
             }
         }
         &:nth-child(2) {
-            // border: 1px solid green;
             position: absolute;
             right: 52px;
             bottom: 42px;
@@ -46,14 +44,11 @@
                 bottom: 37px;
             }
             @include miniOnly {
-                // border: 1px solid #000;
                 width: 22.5px;
                 height: 22.5px;
                 right : 36.5px;
             }
-            &.--menu {
-                //* pouquoi le hover ne fonctionne pas ? alors que sur la page accueil ça fonctionne ?
-                //*le gradient doit être défini dans la même page
+            &.heartMenu {
                 bottom: -8px;
                 right: 32px;
                 @include miniOnly {

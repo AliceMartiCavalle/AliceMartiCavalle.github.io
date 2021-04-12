@@ -13,7 +13,7 @@ $size : (
     small : 1.1em
 );
 
-$weight : (
+$font : ( 
     thin : 'Roboto-Thin',
     medium : 'Roboto-Medium',
     bold : 'Roboto-Bold'
@@ -25,10 +25,3 @@ $breakpoints : (  /*mix-width*/
     tablet : 768px,
     desktop : 1025px
 );
-
-/*
-$font : (
-    titre : 'shrikhand',
-    texte : 'roboto'
-);
-*/
